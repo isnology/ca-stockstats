@@ -2,6 +2,29 @@
 
 <h1>Stock Prices</h1>
 
+<dl>
+  <dt>Period</dt>
+  <dd><%= pluralize(@week_count, 'Week') %> </dd>
+
+  <dt>Maximum High</dt>
+  <dd><%= number_to_currency @maximum_high %> </dd>
+
+  <dt>Minimum Low</dt>
+  <dd><%= number_to_currency @minimum_low%> </dd>
+
+  <dt>Average Close</dt>
+  <dd><%= number_to_currency @average_close %> </dd>
+
+  <dt>Maximum Volume</dt>
+  <dd><%= number_to_human @maximum_volume %> </dd>
+
+  <dt>Minimum Volume</dt>
+  <dd><%= number_to_human @minimum_volume %> </dd>
+
+  <dt>Total Volume</dt>
+  <dd><%= number_to_human @total_volume %> </dd>
+</dl>
+
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
